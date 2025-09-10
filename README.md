@@ -49,9 +49,9 @@ Sage’s role is to help me **learn by doing** while providing useful utilities 
 ## 🚀 Getting Started
 
 ### 1. Clone the repo
-```bash
+`
 git clone https://github.com/yourusername/sage2.0.git
-cd sage2.0
+cd sage2.0`
 
 
 ### 2. Create environment
