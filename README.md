@@ -12,39 +12,47 @@ This repo is part of a hands-on journey to understand:
 
 ## 📌 Project Purpose
 
-This is **not** a production-level agent (yet). It's a **learning and experimentation sandbox** built with modern AI tooling. The goal is to:
+This is **not** a production-level agent (yet). It’s a **learning and experimentation sandbox** built with modern AI tooling.  
 
-- Understand how to build an agent that can reason and act
-- Learn the LangChain ecosystem (memory, tools, agents, retrievers)
-- Eventually build a fully capable **local AI assistant** that can:
-  - Answer questions
-  - Access local files
-  - Summarize documents
-  - Execute scripts or commands
-  - Help with coding or task automation
+Sage’s role is to help me **learn by doing** while providing useful utilities along the way. Current goals:  
+- Understand how to build an agent that can reason and act  
+- Learn the LangChain ecosystem (memory, tools, agents, retrievers)  
+- Develop **concrete utilities** that make Sage helpful in daily projects  
+
+### 🔨 Current Tools & Purposes
+
+| Tool / Capability       | Purpose                                                                 |
+|--------------------------|-------------------------------------------------------------------------|
+| **Dataset Builder**      | Generate structured JSON datasets of dance prompts (Concepts, Themes, Training) for later fine-tuning models (e.g., Ollama/Mistral). |
+| **Task Tracker**         | Break down project goals into actionable steps, output JSON, and (future) sync with Notion or task managers. |
+| **Q&A / Summarizer**     | Answer questions or summarize docs (planned).                          |
+| **Local File Tools**     | Read and process local files for quick retrieval or summarization (planned). |
+| **Script Executor**      | Assist with coding tasks, run local scripts, or automate workflows (future). |
 
 ---
 
 ## 🛠️ Stack & Technologies
 
 | Layer              | Tool / Tech                              | Purpose                           |
-|-------------------|------------------------------------------|-----------------------------------|
-| **LLM**            | [Anthropic Claude 3 (Sonnet)]            | Core model powering the agent     |
+|--------------------|------------------------------------------|-----------------------------------|
+| **LLM**            | [Anthropic Claude 3 (Haiku)]             | Core model powering the agent     |
 | **Framework**      | [LangChain](https://www.langchain.com)   | Agent orchestration & chaining    |
 | **Memory**         | `ConversationBufferMemory`               | Persistent chat history           |
+| **Validation**     | [Pydantic](https://docs.pydantic.dev)    | Strict JSON schemas for outputs   |
 | **Environment**    | `Python 3.11+` + `venv` + `.env`         | Local dev                         |
 | **Prompting**      | LangChain Prompt Templates               | Dynamic prompt injection          |
-| **Agent Type**     | ReAct or Tool-using Agent                | Reasoning with tools (planned)    |
-| **Future Tools**   | Web search, local file system, CLI tools | For task assistance on local PC   |
+| **Agent Type**     | ReAct / Tool-using Agent (planned)       | Reasoning with tools              |
+| **Future Tools**   | Notion API, web search, local CLI tools  | Expanding Sage’s reach            |
 
 ---
 
 ## 🚀 Getting Started
 
 ### 1. Clone the repo
+```bash
+git clone https://github.com/yourusername/sage2.0.git
+cd sage2.0
 
-`git clone https://github.com/yourusername/sage2.0.git
-cd sage2.0`
 
 ### 2. Create environment
 `python -m venv venv
