@@ -1,52 +1,49 @@
-# 🧠 Sage 2.0 — Local AI Agent Playground
+# 🧠 S.A.G.E 2.0 — Local AI Agent Playground  
 
-Sage 2.0 is a personal AI agent project designed to **explore and learn** the inner workings of **LLMs (Large Language Models)** and **autonomous AI agents**.
-
-This repo is part of a hands-on journey to understand:
-- 🧠 How LLMs work under the hood (currently using **Anthropic Claude 3**)
-- 🔁 How agents can reason, plan, and take actions
-- 🛠️ How tools, memory, prompts, and chains come together
-- 💻 How to control or assist **local machine tasks** through an intelligent assistant
+S.A.G.E (System for Autonomous Guidance & Execution) 2.0 is a personal AI agent project designed to **explore and learn** the inner workings of **LLMs (Large Language Models)** and **autonomous AI agents** — while also being a useful assistant for research and project building.  
 
 ---
 
-## 📌 Project Purpose
+## 📌 Project Purpose  
 
-This is **not** a production-level agent (yet). It’s a **learning and experimentation sandbox** built with modern AI tooling.  
+This is a **learning + experimentation sandbox** built with modern AI tooling.  
+S.A.G.E’s role is to help me **learn by doing** while providing concrete utilities:  
 
-Sage’s role is to help me **learn by doing** while providing useful utilities along the way. Current goals:  
-- Understand how to build an agent that can reason and act  
+- Explore how agents reason, plan, and act  
 - Learn the LangChain ecosystem (memory, tools, agents, retrievers)  
-- Develop **concrete utilities** that make Sage helpful in daily projects  
-
-### 🔨 Current Tools & Purposes
-
-| Tool / Capability       | Purpose                                                                 |
-|--------------------------|-------------------------------------------------------------------------|
-| **Dataset Builder**      | Generate structured JSON datasets of dance prompts (Concepts, Themes, Training) for later fine-tuning models (e.g., Ollama/Mistral). |
-| **Task Tracker**         | Break down project goals into actionable steps, output JSON, and (future) sync with Notion or task managers. |
-| **Q&A / Summarizer**     | Answer questions or summarize docs (planned).                          |
-| **Local File Tools**     | Read and process local files for quick retrieval or summarization (planned). |
-| **Script Executor**      | Assist with coding tasks, run local scripts, or automate workflows (future). |
+- Develop structured, tool-using agents that output clean JSON  
+- Build utilities that support research, dataset creation, and automation  
 
 ---
 
-## 🛠️ Stack & Technologies
+## 🔨 Current Functionality  
+
+| Feature / Tool        | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| **Research Assistant** | Takes a user query, searches the web, queries Wikipedia, and summarizes results. |
+| **Structured Outputs** | Uses Pydantic schemas to enforce strict JSON structure for responses (topic, summary, sources, tools used). |
+| **Web Search Tool**    | Integrates DuckDuckGo search for live information retrieval.                |
+| **Wikipedia Tool**     | Queries Wikipedia for concise factual lookups.                             |
+| **File Save Tool**     | Saves structured research results into timestamped `.txt` files.            |
+| **JSON Validation**    | All outputs validated via Pydantic → ensures responses are consistent and usable. |
+
+---
+
+## 🛠️ Stack & Technologies  
 
 | Layer              | Tool / Tech                              | Purpose                           |
 |--------------------|------------------------------------------|-----------------------------------|
 | **LLM**            | [Anthropic Claude 3 (Haiku)]             | Core model powering the agent     |
 | **Framework**      | [LangChain](https://www.langchain.com)   | Agent orchestration & chaining    |
-| **Memory**         | `ConversationBufferMemory`               | Persistent chat history           |
 | **Validation**     | [Pydantic](https://docs.pydantic.dev)    | Strict JSON schemas for outputs   |
-| **Environment**    | `Python 3.11+` + `venv` + `.env`         | Local dev                         |
+| **Environment**    | `Python 3.11+` + `venv` + `.env`         | Local development setup           |
 | **Prompting**      | LangChain Prompt Templates               | Dynamic prompt injection          |
-| **Agent Type**     | ReAct / Tool-using Agent (planned)       | Reasoning with tools              |
-| **Future Tools**   | Notion API, web search, local CLI tools  | Expanding Sage’s reach            |
+| **Agent Type**     | Tool-using Agent                         | Research assistant powered by external tools |
+| **Tools**          | DuckDuckGo, Wikipedia, File Writer       | Information retrieval + persistence |
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started  
 
 ### 1. Clone the repo
 `
