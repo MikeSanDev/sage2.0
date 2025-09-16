@@ -7,3 +7,7 @@ __pycache__/
 
 # Environment variables
 .env
+
+
+# Local-only dependency lock file
+requirements.lock
