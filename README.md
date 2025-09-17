@@ -1,4 +1,4 @@
-# 🧠 S.A.G.E 2.0 — Local AI Agent Playground  
+# 🧠 S.A.G.E 2.0 — Local AI Research Agent  
 
 S.A.G.E (System for Autonomous Guidance & Execution) 2.0 is a personal AI agent project designed to **explore and learn** the inner workings of **LLMs (Large Language Models)** and **autonomous AI agents** — while also being a useful assistant for research and project building.  
 
